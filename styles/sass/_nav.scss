@@ -1,0 +1,53 @@
+header {
+    display: flex;
+    width: calc(100% - 80px);
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+
+    div {
+        display: flex;
+        width: 40%;
+
+        h1 {
+            font-family: $mainText;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 3rem;
+            color: $black;
+        }
+    }
+
+    nav {
+
+        display: flex;
+        align-items: center;
+        width: 50%;
+
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-grow: 1;
+
+            li {
+                display: flex;
+                font-family: $mainText;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+
+            li:hover {
+                color: $accentGreen;
+                cursor: pointer;
+            }
+        }
+    }
+
+.mobileMenu {
+    display: none;
+}
+
+}
