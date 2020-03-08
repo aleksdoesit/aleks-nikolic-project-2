@@ -221,21 +221,12 @@ textarea {
   overflow: hidden;
 }
 
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: calc(100% - 80px);
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+header > div,
+header nav {
   margin-top: 20px;
   margin-left: 40px;
   margin-right: 40px;
+  width: calc(100% - 80px);
 }
 
 header div {
@@ -257,9 +248,6 @@ header nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 50%;
 }
 
@@ -267,9 +255,6 @@ header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -285,15 +270,391 @@ header nav ul li {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
+  padding-top: 10px;
 }
 
-header nav ul li:hover {
+header nav ul li a,
+header nav ul li a:visited {
+  color: #2E2E2E;
+  text-decoration: none;
+  height: 30px;
+}
+
+header nav ul li a:hover {
   color: #64A604;
   cursor: pointer;
 }
 
 header .mobileMenu {
   display: none;
+}
+
+header {
+  background: url("../delicious-assets/home-1.jpeg");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main h2,
+main h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #2E2E2E;
+}
+
+main h2 {
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+}
+
+main h2:after {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  width: 20%;
+  padding-top: 20px;
+  border-bottom: 5px solid #64A604;
+}
+
+main p {
+  font-family: "Lora", serif;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+main .recipes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .recipes div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .recipes div h2,
+main .recipes div p,
+main .recipes div a {
+  max-width: 80%;
+}
+
+main .recipes div p {
+  color: #999999;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  margin-bottom: 40px;
+}
+
+main .recipes div a {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  color: #F6F6F6;
+  background-color: #64A604;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 20px 40px;
+  border: 2px solid #FCFCFC;
+}
+
+main .recipes div a:hover {
+  color: #64A604;
+  background-color: #F6F6F6;
+  border: 2px solid #64A604;
+}
+
+main .recipes div img {
+  width: 100%;
+}
+
+main .offerings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .offerings div:first-child {
+  width: 50%;
+}
+
+main .offerings div:first-child img {
+  width: 100%;
+}
+
+main .offerings div:nth-child(2) ul {
+  margin-left: 50px;
+}
+
+main .offerings div:nth-of-type(2),
+main .offerings div:nth-of-type(3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 25%;
+}
+
+main .offerings div:nth-of-type(2) li:last-child p,
+main .offerings div:nth-of-type(3) li:last-child p {
+  margin-bottom: 0;
+}
+
+main .offerings div:nth-of-type(2) ul,
+main .offerings div:nth-of-type(3) ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .offerings div:nth-of-type(2) ul li,
+main .offerings div:nth-of-type(3) ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .offerings div:nth-of-type(2) ul li .flexIcons,
+main .offerings div:nth-of-type(3) ul li .flexIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+
+main .offerings div:nth-of-type(2) ul li .flexIcons h3,
+main .offerings div:nth-of-type(2) ul li .flexIcons i,
+main .offerings div:nth-of-type(3) ul li .flexIcons h3,
+main .offerings div:nth-of-type(3) ul li .flexIcons i {
+  color: #2E2E2E;
+}
+
+main .offerings div:nth-of-type(2) ul li .flexIcons i,
+main .offerings div:nth-of-type(3) ul li .flexIcons i {
+  font-size: 1.8rem;
+  margin-right: 20px;
+}
+
+main .offerings div:nth-of-type(2) ul li .flexIcons h3,
+main .offerings div:nth-of-type(3) ul li .flexIcons h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+main .offerings div:nth-of-type(2) ul li p,
+main .offerings div:nth-of-type(3) ul li p {
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: #999999;
+  line-height: 1.4rem;
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+
+main .ourRestaurants {
+  text-align: center;
+  position: relative;
+}
+
+main .ourRestaurants img {
+  margin-top: 200px;
+  margin-bottom: 75px;
+}
+
+main .ourRestaurants > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .ourRestaurants > div::after {
+  content: url("../delicious-assets/home-circle-text.png");
+  position: absolute;
+  right: 370px;
+  top: 90px;
+  z-index: 1;
+}
+
+main .ourRestaurants h2:after {
+  width: 5%;
+  padding-top: 30px;
+}
+
+main .ourRestaurants p {
+  width: 50%;
+  margin: 0 auto;
+  color: #999999;
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+  padding-bottom: 150px;
+}
+
+main .gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .gallery div:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: calc((100% / 3) * 2);
+}
+
+main .gallery div:first-child img {
+  width: 50%;
+}
+
+main .gallery div:last-child {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(100% / 3);
+}
+
+main .hungryClients {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #DDED9A;
+}
+
+main .hungryClients div:first-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70%;
+}
+
+main .hungryClients div:first-child h2 {
+  margin-top: 125px;
+}
+
+main .hungryClients div:first-child h2:after {
+  width: 30%;
+}
+
+main .hungryClients div:first-child p {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  text-align: center;
+  font-style: italic;
+  color: #333333;
+  opacity: 0.8;
+  margin-bottom: 60px;
+}
+
+main .hungryClients div:first-child i {
+  position: absolute;
+  color: #F6F6F6;
+  font-size: 3rem;
+}
+
+main .hungryClients div:first-child i:first-child {
+  left: -70px;
+  bottom: 150px;
+}
+
+main .hungryClients div:first-child i:last-child {
+  right: -70px;
+  bottom: 70px;
+}
+
+main .hungryClients div:last-child i {
+  font-size: 2rem;
+  color: #F6F6F6;
+  opacity: 0.8;
+  margin: 0 20px 125px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+main .hungryClients div:last-child i:hover {
+  opacity: 1;
+  cursor: pointer;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: all 0.3;
+  transition: all 0.3;
+}
+
+@media (max-width: 1420px) {
+  .offerings p {
+    height: 67px;
+    overflow: scroll;
+  }
 }
 
 footer {
@@ -428,7 +789,7 @@ footer div div:last-child .arrowNav:hover {
 footer div div:last-child .socialLinks {
   border-top: 1px solid rgba(153, 153, 153, 0.5);
   padding-top: 10px;
-  margin-bottom: 80px;
+  margin-bottom: 90px;
 }
 
 footer div div:last-child .socialLinks i {
@@ -438,4 +799,32 @@ footer div div:last-child .socialLinks i {
 footer div div:last-child .socialLinks i:hover {
   color: #64A604;
   cursor: pointer;
+}
+
+@media (max-width: 1420px) {
+  footer > div div:nth-child(2) {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1255px) {
+  footer > div div {
+    max-height: 340px;
+  }
+  footer > div div:first-child {
+    margin-left: 0px;
+  }
+  footer > div div:first-child p {
+    max-height: 100px;
+    overflow: scroll;
+  }
+  footer > div div:first-child footer > div div:nth-child(2) {
+    overflow: scroll;
+  }
+  footer > div div:first-child footer > div div:last-child {
+    margin-right: 0;
+  }
+  footer > div div:first-child footer > div div:last-child input {
+    width: 75%;
+  }
 }

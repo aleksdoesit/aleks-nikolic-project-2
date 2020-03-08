@@ -1,0 +1,297 @@
+header {
+    background: url('../delicious-assets/home-1.jpeg');
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+main {
+
+    h2,
+    h3 {
+        font-family: $mainText;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $black;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+    }
+
+    h2:after {
+        content: '';
+        display: block;
+        margin: 0 auto;
+        width: 20%;
+        padding-top: 20px;
+        border-bottom: 5px solid $accentGreen;
+    }
+
+    p {
+        font-family: $bodyText;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+    }
+
+    .recipes {
+        display: flex;
+
+        div {
+            display: flex;
+            width: 50%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            h2,
+            p,
+            a {
+                max-width: 80%;
+            }
+
+            p {
+                color: $brownGrey;
+                text-align: center;
+                font-size: 0.8rem;
+                line-height: 1.5rem;
+                margin-bottom: 40px;
+            }
+
+            a {
+                font-family: $mainText;
+                font-weight: 700;
+                color: $white;
+                background-color: $accentGreen;
+                text-decoration: none;
+                text-transform: uppercase;
+                padding: 20px 40px;
+                border: 2px solid #FCFCFC;
+            }
+
+            a:hover {
+                color: $accentGreen;
+                background-color: $white;
+                border: 2px solid $accentGreen;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .offerings {
+        display: flex;
+
+        div:first-child {
+            width: 50%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        div:nth-child(2) {
+            ul {
+                margin-left: 50px;
+            }
+        }
+
+        div:nth-of-type(2),
+        div:nth-of-type(3) {
+            display: flex;
+            width: 25%;
+
+            li:last-child p {
+                margin-bottom: 0;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                li {
+                    display: flex;
+                    width: 90%;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .flexIcons {
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+
+                        h3,
+                        i {
+                            color: $black;
+                        }
+
+                        i {
+                            font-size: 1.8rem;
+                            margin-right: 20px;
+                        }
+
+                        h3 {
+                            font-family: $mainText;
+                            font-weight: 700;
+                            font-size: 1rem;
+                            text-transform: uppercase;
+                            text-align: left;
+                        }
+                    }
+
+                    p {
+                        font-weight: 600;
+                        font-size: 0.8rem;
+                        color: $brownGrey;
+                        line-height: 1.4rem;
+                        margin-left: 50px;
+                        margin-bottom: 50px;
+                    }
+                }
+            }
+        }
+    }
+
+    .ourRestaurants {
+        text-align: center;
+        position: relative;
+
+        img {
+            margin-top: 200px;
+            margin-bottom: 75px;
+        }
+
+        >div {
+            display: flex;
+            justify-content: center;
+        }
+
+        >div::after {
+            content: url('../delicious-assets/home-circle-text.png');
+            position: absolute;
+            right: 370px;
+            top: 90px;
+            z-index: 1;
+        }
+
+        h2:after {
+            width: 5%;
+            padding-top: 30px;
+        }
+
+        p {
+            width: 50%;
+            margin: 0 auto;
+            color: $brownGrey;
+            font-size: 0.8rem;
+            line-height: 1.4rem;
+            padding-bottom: 150px;
+        }
+    }
+
+    .gallery {
+        display: flex;
+
+        div:first-child {
+            display: flex;
+            flex-wrap: wrap;
+            width: calc((100% / 3) * 2);
+
+            img {
+                width: 50%;
+            }
+        }
+
+        div:last-child {
+            flex-wrap: wrap;
+            display: flex;
+            width: calc(100% / 3);
+        }
+    }
+
+    .hungryClients {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $mainGreen;
+
+        div:first-child {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            align-items: center;
+            width: 70%;
+
+            h2 {
+                margin-top: 125px;
+            }
+
+            h2:after {
+                width: 30%;
+            }
+
+            p {
+                font-size: 1.4rem;
+                line-height: 1.8rem;
+                text-align: center;
+                font-style: italic;
+                color: $black2;
+                opacity: 0.8;
+                margin-bottom: 60px;
+            }
+
+            i {
+                position: absolute;
+                color: $white;
+                font-size: 3rem;
+            }
+
+            i:first-child {
+                left: -70px;
+                bottom: 150px;
+            }
+
+            i:last-child {
+                right: -70px;
+                bottom: 70px;
+            }
+
+        }
+
+        div:last-child {
+
+            i {
+                font-size: 2rem;
+                color: $white;
+                opacity: 0.8;
+                margin: 0 20px 125px;
+                transition: all 0.3s;
+            }
+
+            i:hover {
+                opacity: 1;
+                cursor: pointer;
+                transform: scale(1.5);
+                transition: all 0.3;
+            }
+        }
+    }
+}
+
+// Small laptop Viewport
+@media (max-width: 1420px) {
+    .offerings p {
+        height: 67px;
+        overflow: scroll;
+    }
+}
+
+// @media (max-width
+// )
