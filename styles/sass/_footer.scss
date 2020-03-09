@@ -147,27 +147,108 @@ footer {
 // Tablet Landscape Viewport
 @media (max-width: 1255px) {
 
-    footer>div div {
-        max-height: 340px;
-    }
+    footer {
+        >div div {
+            max-height: 340px;
+        }
 
-    footer>div div:first-child {
-        margin-left: 0px;
+        >div div:first-child {
+            margin-left: 0px;
+        }
 
         p {
             max-height: 100px;
             overflow: scroll;
         }
 
-        footer>div div:nth-child(2) {
+        >div div:nth-child(2) {
             overflow: scroll;
         }
 
-        footer>div div:last-child {
+        div div:last-child {
             margin-right: 0;
 
             input {
                 width: 75%;
+            }
+        }
+
+    }
+
+    .recentPosts {
+        overflow: scroll;
+    }
+}
+
+// Tablet Portrait View
+
+@media (max-width: 850px) {
+    footer {
+
+        p {
+            line-height: 1.4rem;
+        }
+
+        div {
+            flex-direction: column;
+            padding-bottom: 20px;
+
+            div:nth-child(2) {
+                display: none;
+            }
+
+            div:last-child {
+                flex-direction: column-reverse;
+
+                h5 {
+                    display: none;
+                }
+
+                .socialLinks {
+                    margin-bottom: 20px;
+                    margin-top: 8px;
+                    font-size: 2rem;
+                    border: none;
+                }
+
+                .socialLinks:hover {
+                    color: $accentGreen;
+                    cursor: pointer;
+                }
+
+                .arrowNav {
+                    i {
+                        display: none;
+                    }
+
+                    margin-bottom: 10px;
+                }
+
+                .arrowNav:after {
+                    content: 'Subscribe Now';
+                    display: inline-block;
+                    font-family: $mainText;
+                    font-size: 1.2rem;
+                    text-transform: uppercase;
+                    color: $white;
+                    font-weight: 700;
+                }
+            }
+
+            div {
+                display: flex;
+                width: 80%;
+                margin: 0 0;
+                align-items: center;
+                padding-bottom: 0;
+
+                h4 {
+                    margin-bottom: 10px;
+                }
+
+                p:nth-of-type(1) {
+                    display: none;
+                }
             }
         }
     }

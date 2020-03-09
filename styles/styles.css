@@ -289,12 +289,79 @@ header .mobileMenu {
   display: none;
 }
 
+@media (max-width: 1200px) {
+  header nav {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  header div {
+    width: 100%;
+  }
+  header div .mobileMenu {
+    display: inline-block;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 3rem;
+    padding-right: 30px;
+    height: 50px;
+  }
+  header div i:hover {
+    color: #64A604;
+  }
+  header nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: flex-end;
+            flex-direction: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  header nav ul li {
+    padding: 0;
+  }
+  header nav ul li:nth-child(-n+7) {
+    display: none;
+  }
+  header nav ul a {
+    padding: 0 10px;
+  }
+  header nav ul a i {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  header div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  header div h1 {
+    font-size: 1.8rem;
+  }
+  header div .mobileMenu {
+    font-size: 1.8rem;
+  }
+  header nav {
+    display: none;
+  }
+}
+
 header {
   background: url("../delicious-assets/home-1.jpeg");
+  background-position: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100vh;
+  height: 90vh;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -553,6 +620,10 @@ main .gallery div:first-child {
   width: calc((100% / 3) * 2);
 }
 
+main .gallery div:first-child a {
+  display: none;
+}
+
 main .gallery div:first-child img {
   width: 50%;
 }
@@ -654,6 +725,167 @@ main .hungryClients div:last-child i:hover {
   .offerings p {
     height: 67px;
     overflow: scroll;
+  }
+}
+
+@media (max-width: 1100px) {
+  header {
+    height: 80vh;
+    background-position: center;
+  }
+  main .recipes div:first-child {
+    width: 65%;
+    margin: 80px 0;
+  }
+  main .recipes div:nth-child(2) {
+    width: calc(35% - 80px);
+  }
+  main .offerings {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main .offerings div:first-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: calc(35% - 80px);
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    margin-left: 80px;
+  }
+  main .offerings div:nth-of-type(2),
+  main .offerings div:nth-of-type(3) {
+    width: calc(65% / 2);
+  }
+  main .offerings div:nth-of-type(2) ul,
+  main .offerings div:nth-of-type(3) ul {
+    margin: 0 auto;
+  }
+  main .offerings div:nth-of-type(2) ul li .flexIcons,
+  main .offerings div:nth-of-type(3) ul li .flexIcons {
+    width: 50%;
+  }
+  main .ourRestaurants > div:after {
+    right: 200px;
+  }
+  main .gallery div:first-child {
+    width: 100%;
+  }
+  main .gallery div:last-child {
+    display: none;
+  }
+}
+
+@media (max-width: 850px) {
+  main .recipes div:first-child {
+    width: 100%;
+  }
+  main .recipes div:last-child {
+    display: none;
+  }
+  main .offerings div:first-child {
+    display: none;
+  }
+  main .offerings div:nth-of-type(2),
+  main .offerings div:nth-of-type(3) {
+    width: 100%;
+  }
+  main .ourRestaurants img {
+    margin-top: 120px;
+  }
+  main .ourRestaurants p {
+    width: 75%;
+    font-size: 1rem;
+    padding-bottom: 80px;
+  }
+  main .gallery div:first-child {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+  }
+  main .gallery div:first-child div a {
+    font-family: "Raleway", sans-serif;
+    color: #64A604;
+    font-size: 2.5rem;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  main .gallery div:first-child div a:first-child {
+    left: 40px;
+    bottom: 130px;
+  }
+  main .gallery div:first-child div a:nth-child(2) {
+    right: 40px;
+    bottom: 130px;
+  }
+  main .gallery div:first-child div a:hover {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    -webkit-transition: all 0.3;
+    transition: all 0.3;
+  }
+  main .gallery div:first-child img:nth-child(3),
+  main .gallery div:first-child img:nth-child(4) {
+    display: none;
+  }
+  main .hungryClients div:first-child i {
+    display: none;
+  }
+  main .hungryClients div:first-child h2 {
+    text-align: center;
+  }
+  main .hungryClients div:first-child p {
+    font-size: 1rem;
+    overflow: scroll;
+    height: 200px;
+  }
+}
+
+@media (max-width: 550px) {
+  main .recipes h2 {
+    text-align: center;
+  }
+  main .offerings {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .offerings div:first-child {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 60px;
+  }
+  main .offerings div:nth-child(2) ul li p,
+  main .offerings div:nth-child(3) ul li p {
+    margin: 0 0 20px;
+    width: 60%;
+  }
+  main .offerings div:nth-child(2) ul li .flexIcons,
+  main .offerings div:nth-child(3) ul li .flexIcons {
+    padding-bottom: 10px;
+  }
+  main .gallery div:first-child img:first-child {
+    width: 100%;
+  }
+  main .gallery div:first-child img:nth-child(2) {
+    display: none;
   }
 }
 
@@ -814,17 +1046,87 @@ footer div div:last-child .socialLinks i:hover {
   footer > div div:first-child {
     margin-left: 0px;
   }
-  footer > div div:first-child p {
+  footer p {
     max-height: 100px;
     overflow: scroll;
   }
-  footer > div div:first-child footer > div div:nth-child(2) {
+  footer > div div:nth-child(2) {
     overflow: scroll;
   }
-  footer > div div:first-child footer > div div:last-child {
+  footer div div:last-child {
     margin-right: 0;
   }
-  footer > div div:first-child footer > div div:last-child input {
+  footer div div:last-child input {
     width: 75%;
+  }
+  .recentPosts {
+    overflow: scroll;
+  }
+}
+
+@media (max-width: 850px) {
+  footer p {
+    line-height: 1.4rem;
+  }
+  footer div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 20px;
+  }
+  footer div div:nth-child(2) {
+    display: none;
+  }
+  footer div div:last-child {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  footer div div:last-child h5 {
+    display: none;
+  }
+  footer div div:last-child .socialLinks {
+    margin-bottom: 20px;
+    margin-top: 8px;
+    font-size: 2rem;
+    border: none;
+  }
+  footer div div:last-child .socialLinks:hover {
+    color: #64A604;
+    cursor: pointer;
+  }
+  footer div div:last-child .arrowNav {
+    margin-bottom: 10px;
+  }
+  footer div div:last-child .arrowNav i {
+    display: none;
+  }
+  footer div div:last-child .arrowNav:after {
+    content: 'Subscribe Now';
+    display: inline-block;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #F6F6F6;
+    font-weight: 700;
+  }
+  footer div div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80%;
+    margin: 0 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 0;
+  }
+  footer div div h4 {
+    margin-bottom: 10px;
+  }
+  footer div div p:nth-of-type(1) {
+    display: none;
   }
 }
